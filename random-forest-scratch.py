@@ -126,7 +126,7 @@ def oob_score(tree, X_test, y_test):
 
 def split_data(data, features, perc):
     nb_train = int(np.floor(perc * len(data)))
-    data = data.sample(frac=1, random_state=217)
+    data = data.sample(frac=1, random_state=42)
 
     X_train = data[features][:nb_train]
     y_train = data['Class'][:nb_train].values
@@ -187,7 +187,7 @@ if __name__ == '__main__':
     data['Class'] = data['Class'].astype('category').cat.codes
 
 
-    X_train, y_train, X_test, y_test = split_data(data, features, 0.5)
+    X_train, y_train, X_test, y_test = split_data(data, features, 0.4)
 
     # parameters
     n_estimators = 100
