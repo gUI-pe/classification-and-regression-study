@@ -9,7 +9,6 @@ def entropy_multi(y):
     probs = counts / len(y)
     return -np.sum([p * np.log2(p) for p in probs if p > 0])
 
-
 def information_gain(left_child, right_child):
     parent = np.concatenate([left_child, right_child])
     IG_p = entropy_multi(parent)
