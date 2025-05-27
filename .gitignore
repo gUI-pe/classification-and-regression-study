@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 examples
 venv
 __pycache__
 requirements
+=======
+Vital signals
+venv
+examples
+__pycache__
+>>>>>>> ae34941 (gitignore)
